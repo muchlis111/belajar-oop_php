@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 14/01/2016
- * Time: 6:55
- */
+
+// Require psr-0 autoloader
+require 'autoload.php';
+
+$administrator = new Acme\App\Administrator();
+$administrator->facebookid = 'joostvanveen';
+var_dump($administrator->facebookid);
+var_dump($administrator->getFacebookData());

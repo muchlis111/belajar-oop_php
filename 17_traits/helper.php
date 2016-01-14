@@ -1,7 +1,11 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: user
- * Date: 14/01/2016
- * Time: 6:54
+ * Create a hash
+ * @param string $string
+ * @return string
  */
+function getHash($string){
+    return hash('sha256', $string);
+}
+

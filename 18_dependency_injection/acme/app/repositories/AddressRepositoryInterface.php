@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 14/01/2016
- * Time: 8:26
- */
+
+namespace acme\app\repositories;
+
+interface AaddressRepositoryInterface
+{
+    public function Find($id, \acme\app\address $address);
+}

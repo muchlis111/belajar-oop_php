@@ -1,7 +1,32 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 14/01/2016
- * Time: 6:59
- */
+
+namespace acme\library;
+
+class User
+{
+
+    /**
+     * A private property or method is only accessible from the class itself
+     */
+    private $foo;
+
+    /**
+     * A protected property or method is accessible only from the class
+     * itself AND from it's children classes.
+     */
+    protected $bar;
+
+    /**
+     * A public property or method is accessible from anywhere.
+     */
+    public $baz;
+
+    /**
+     * Log in a use
+     * @return string
+     */
+    protected function login()
+        return 'Logging in from User class ...';
+    }
+}
+

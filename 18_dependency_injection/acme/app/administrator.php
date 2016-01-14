@@ -1,7 +1,36 @@
 <?php
+
+namespace acme\app;
+
 /**
- * Created by PhpStorm.
- * User: user
- * Date: 14/01/2016
- * Time: 8:21
+ * This class extends acme\app\user
  */
+class Administrator extends User {
+
+    public function __construct(Array $params = array()) {
+        parent::__construct($params);
+        $this->isAdmin = true;
+    }
+
+    /**
+     * Log in a user
+     * @return string
+     */
+    public function login(){
+
+        // Login in our member using the logic in the parent class.
+        $message = parent::login();
+
+        // Add some administrator-spcific logic
+        return $message . ' ... Log this action in an administrator\'s table';
+    }
+
+    /**
+     * This method is for Administrators only
+     */
+    public function reportForDuty ()
+    {
+        // Do stuff ...
+    }
+
+}

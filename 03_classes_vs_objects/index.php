@@ -9,4 +9,4 @@ $joost->password = 'ghv7%lsv7';
 $nick = new User();
 $nick->email = 'nick@tutsplus.com';
 $nick->password = 'ghdhB6Lsv7';
-var_dump($nick->login());
+var_dump($nick->);
